@@ -1,6 +1,6 @@
 <?php
 
-namespace Contract\Application\DTO;
+namespace MusicPlayground\Contract\Application\DTO;
 
 final readonly class ArtistSourceDTO
 {

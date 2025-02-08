@@ -1,6 +1,6 @@
 <?php
 
-namespace Contract\Application\Command;
+namespace MusicPlayground\Contract\Application\Command;
 
 interface CommandWithIdInterface
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Contract\Application\DTO;
+namespace MusicPlayground\Contract\Application\DTO;
 
-use Contract\Application\Command\CommandWithIdInterface;
+use MusicPlayground\Contract\Application\Command\CommandWithIdInterface;
 
 final readonly class UpdateArtistCommand implements CommandWithIdInterface
 {
