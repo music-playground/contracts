@@ -7,7 +7,7 @@ final readonly class TrackDTO
     public function __construct(
         public string $fileId,
         public string $name,
-        public SimpleArtistDTO $author,
+        public SimpleArtistDTO $artist,
         public TrackSourceDTO $source,
         public AlbumSourceDTO $album
     ) {
