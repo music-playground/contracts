@@ -7,8 +7,11 @@ use MusicPlayground\Contract\Application\SongParser\DTO\ArtistSourceDTO;
 
 final readonly class OnUpdateArtistCommand implements CommandWithIdInterface
 {
-    public function __construct(public ArtistSourceDTO $source)
-    {
+    public function __construct(
+        public ArtistSourceDTO $source,
+        /** @var array<string> */
+        public array $containsAlbums
+    ) {
     }
 
     public function getId(): string

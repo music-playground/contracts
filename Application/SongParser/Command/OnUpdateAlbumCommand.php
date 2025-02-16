@@ -11,7 +11,6 @@ final readonly class OnUpdateAlbumCommand implements CommandWithIdInterface
     public function __construct(
         public AlbumSourceDTO $source,
         public ArtistSourceDTO $artistSource,
-        public bool $isNew,
         /** @var array<string> */
         public array $containsTracks
     ) {
