@@ -1,0 +1,17 @@
+{
+    "name": "music-playground/contracts",
+    "description": "Contracts for services",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "\\MusicPlayground\\Contract\\": "."
+        }
+    },
+    "authors": [
+        {
+            "name": "WhtsPoint",
+            "email": "whtspoint@gmail.com"
+        }
+    ],
+    "require": {}
+}
