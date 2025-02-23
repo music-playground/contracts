@@ -6,7 +6,7 @@ final readonly class ArtistDTO
 {
     public function __construct(
         public string $name,
-        public ?string $avatarUrl,
+        public ?string $avatarId,
         public ArtistSourceDTO $source,
         public array $genres
     ) {
