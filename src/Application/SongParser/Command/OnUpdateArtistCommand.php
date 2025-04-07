@@ -9,7 +9,6 @@ final readonly class OnUpdateArtistCommand implements CommandWithIdInterface
 {
     public function __construct(
         public ArtistSourceDTO $source,
-        public string $artistId,
         /** @var array<string> */
         public array $containsAlbums
     ) {
