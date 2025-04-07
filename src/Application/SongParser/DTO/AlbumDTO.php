@@ -9,7 +9,8 @@ final readonly class AlbumDTO
         public \DateTimeImmutable $releaseDate,
         public ?string $cover,
         public AlbumSourceDTO $source,
-        public SimpleArtistDTO $artist,
+        /** @var SimpleArtistDTO[] */
+        public array $artists,
         /** @var array<string> */
         public array $genres
     ) {
