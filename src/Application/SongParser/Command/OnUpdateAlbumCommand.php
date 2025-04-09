@@ -8,6 +8,7 @@ use MusicPlayground\Contract\Application\SongParser\DTO\AlbumSourceDTO;
 final readonly class OnUpdateAlbumCommand implements CommandWithIdInterface
 {
     public function __construct(
+        public string $albumId,
         public AlbumSourceDTO $source,
         /** @var array<string> */
         public array $containsTracks

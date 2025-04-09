@@ -8,6 +8,8 @@ final readonly class TrackDTO
         public string $fileId,
         public string $name,
         public string $albumId,
+        /** @var SimpleArtistDTO[] */
+        public array $simpleArtists,
         public TrackSourceDTO $source
     ) {
     }
