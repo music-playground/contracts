@@ -10,8 +10,6 @@ final readonly class FullAlbumDTO
         /** @var string[] */
         public array $genres,
         public string $cover,
-        /** @var string[] */
-        public array $tracks,
         /** @var PreviewArtistDTO[] */
         public array $artists
     ) {
