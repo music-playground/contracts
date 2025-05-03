@@ -11,7 +11,8 @@ final readonly class OperationFailedCommand
 
     public function __construct(
         public string $operationId,
-        string|array $errors
+        string|array $errors,
+        public int $code
     ) {
         if (is_array($errors) === true) {
             if (count($errors) === 0) {
