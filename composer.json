@@ -13,5 +13,7 @@
             "email": "whtspoint@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "symfony/uid": "^7.2"
+    }
 }
