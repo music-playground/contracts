@@ -13,7 +13,8 @@ final readonly class OperationNotificationsCommand implements CommandWithIdInter
     public function __construct(
         public ?string $operationId,
         string|array $messages,
-        public int $code
+        public int $code,
+        public array $params = []
     ) {
         if (is_array($messages) === true) {
             if (count($messages) === 0) {
