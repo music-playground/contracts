@@ -5,24 +5,24 @@ namespace MusicPlayground\Contract\Application\Operation;
 use InvalidArgumentException;
 use MusicPlayground\Contract\Application\Command\CommandWithIdInterface;
 
-final readonly class OperationFailedCommand implements CommandWithIdInterface
+final readonly class OperationNotificationsCommand implements CommandWithIdInterface
 {
     /** @var string|string[] */
     public string|array $errors;
 
     public function __construct(
         public ?string $operationId,
-        string|array $errors,
+        string|array $messages,
         public int $code
     ) {
-        if (is_array($errors) === true) {
-            if (count($errors) === 0) {
+        if (is_array($messages) === true) {
+            if (count($messages) === 0) {
                 throw new InvalidArgumentException('Empty errors array');
             }
 
-            $this->errors = count($errors) === 1 ? $errors[0] : $errors;
+            $this->errors = count($messages) === 1 ? $messages[0] : $messages;
         } else {
-            $this->errors = $errors;
+            $this->errors = $messages;
         }
     }
 
