@@ -3,9 +3,9 @@
 namespace MusicPlayground\Contract\Application\Operation;
 
 use InvalidArgumentException;
-use MusicPlayground\Contract\Application\Command\CommandWithIdInterface;
+use MusicPlayground\Contract\Application\Command\OperationCommandInterface;
 
-final readonly class OperationFailedCommand implements CommandWithIdInterface
+final readonly class OperationFailedCommand implements OperationCommandInterface
 {
     /** @var string|string[] */
     public string|array $errors;
