@@ -7,7 +7,7 @@ final readonly class PlaylistDTO
     public function __construct(
         public string $name,
         public PlaylistSourceDTO $source,
-        public ?string $cover,
+        public ?string $coverId,
         public ?string $description
     ) {
     }
