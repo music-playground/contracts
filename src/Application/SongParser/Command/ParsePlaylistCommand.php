@@ -20,4 +20,9 @@ final readonly class ParsePlaylistCommand implements CommandWithIdInterface, Ope
     {
         return $this->playlistId;
     }
+
+    public function getOperationId(): string
+    {
+        return $this->operationId;
+    }
 }
