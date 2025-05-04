@@ -3,8 +3,9 @@
 namespace MusicPlayground\Contract\Application\Operation;
 
 use InvalidArgumentException;
+use MusicPlayground\Contract\Application\Command\CommandWithIdInterface;
 
-final readonly class OperationFailedCommand
+final readonly class OperationFailedCommand implements CommandWithIdInterface
 {
     /** @var string|string[] */
     public string|array $errors;
@@ -23,5 +24,10 @@ final readonly class OperationFailedCommand
         } else {
             $this->errors = $errors;
         }
+    }
+
+    public function getId(): string
+    {
+        return $this->operationId;
     }
 }
