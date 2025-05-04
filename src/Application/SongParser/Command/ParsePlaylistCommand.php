@@ -3,9 +3,10 @@
 namespace MusicPlayground\Contract\Application\SongParser\Command;
 
 use MusicPlayground\Contract\Application\Command\CommandWithIdInterface;
+use MusicPlayground\Contract\Application\Command\OperationCommandInterface;
 use Symfony\Component\Uid\UuidV4;
 
-final readonly class ParsePlaylistCommand implements CommandWithIdInterface
+final readonly class ParsePlaylistCommand implements CommandWithIdInterface, OperationCommandInterface
 {
     public string $operationId;
 
