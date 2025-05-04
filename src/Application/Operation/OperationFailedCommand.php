@@ -11,7 +11,7 @@ final readonly class OperationFailedCommand implements CommandWithIdInterface
     public string|array $errors;
 
     public function __construct(
-        public string $operationId,
+        public ?string $operationId,
         string|array $errors,
         public int $code
     ) {
@@ -28,6 +28,6 @@ final readonly class OperationFailedCommand implements CommandWithIdInterface
 
     public function getId(): string
     {
-        return $this->operationId;
+        return $this->operationId ?: '#';
     }
 }
