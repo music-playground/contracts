@@ -10,6 +10,7 @@ final readonly class UpdateAlbumForPlaylistCommand implements CommandWithIdInter
 {
     public function __construct(
         public string $operationId,
+        public string $playlistId,
         public AlbumDTO $album,
         public PartialTrackDTO $track
     ) {
