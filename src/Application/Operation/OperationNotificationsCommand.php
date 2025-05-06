@@ -8,7 +8,7 @@ use MusicPlayground\Contract\Application\Command\CommandWithIdInterface;
 final readonly class OperationNotificationsCommand implements CommandWithIdInterface
 {
     /** @var string|string[] */
-    public string|array $errors;
+    public string|array $messages;
 
     public function __construct(
         public ?string $operationId,
@@ -21,9 +21,9 @@ final readonly class OperationNotificationsCommand implements CommandWithIdInter
                 throw new InvalidArgumentException('Empty errors array');
             }
 
-            $this->errors = count($messages) === 1 ? $messages[0] : $messages;
+            $this->messages = count($messages) === 1 ? $messages[0] : $messages;
         } else {
-            $this->errors = $messages;
+            $this->messages = $messages;
         }
     }
 
