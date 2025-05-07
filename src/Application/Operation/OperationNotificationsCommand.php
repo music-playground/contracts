@@ -18,7 +18,7 @@ final readonly class OperationNotificationsCommand implements CommandWithIdInter
     ) {
         if (is_array($messages) === true) {
             if (count($messages) === 0) {
-                throw new InvalidArgumentException('Empty errors array');
+                throw new InvalidArgumentException('Empty messages array');
             }
 
             $this->messages = count($messages) === 1 ? $messages[0] : $messages;
