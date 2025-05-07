@@ -2,7 +2,9 @@
 
 namespace MusicPlayground\Contract\Application\Playlist\Command;
 
-final readonly class UpdateFullPlaylistCommand
+use MusicPlayground\Contract\Application\Command\CommandWithIdInterface;
+
+final readonly class UpdateFullPlaylistCommand implements CommandWithIdInterface
 {
     public function __construct(
         public string $id,
@@ -10,5 +12,10 @@ final readonly class UpdateFullPlaylistCommand
         public ?string $coverId,
         public ?string $description
     ) {
+    }
+
+    public function getId(): string
+    {
+        return $this->id;
     }
 }
